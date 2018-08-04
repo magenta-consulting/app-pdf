@@ -1,0 +1,6 @@
+bean_dev_tool:
+    library_source: E:\wamp31\www\libraries\swarranty\
+    library_workspace: E:\wamp31\www\magenta-pdf\libraries\
+    components: ~
+    bundles:
+        - MagentaAppPdfBundle
