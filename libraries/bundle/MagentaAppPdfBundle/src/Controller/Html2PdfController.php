@@ -22,9 +22,9 @@ class Html2PdfController extends Controller {
 	 * @return PdfResponse
 	 */
 	public function downloadFromUrlAction($url, $name, Request $request) {
-//		$this->container->get('knp_snappy.pdf')->generate($url, 'E:\\hello.pdf');
+		//$this->container->get('knp_snappy.pdf')->generate($url, 'E:\\hello.pdf');
 		return new PdfResponse(
-			$this->get('knp_snappy.pdf')->getOutput(file_get_contents($url)),
+			$this->get('knp_snappy.pdf')->getOutput(($url)),
 			$name . '.pdf'
 		);
 	}
