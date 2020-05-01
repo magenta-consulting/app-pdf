@@ -27,7 +27,14 @@ http.createServer(async function(request, response) {
    let filename = request.url.substr(lastSlashIndex+1);
   console.log(request.url, url, filename);
 
-  const browser = await puppeteer.launch();
+  const browser =  await puppeteer.launch({
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+    ]
+  });
+  
   console.log(puppeteer.product);
   const page = await browser.newPage();
   
